@@ -15,5 +15,6 @@ final readonly class RequestPassword
 {
     public function __construct(
         public Email $email
-    ) {}
+    ) {
+    }
 }

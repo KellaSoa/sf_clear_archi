@@ -15,5 +15,6 @@ final readonly class ClientProfile
         #[\SensitiveParameter] public ?string $userIp = null,
         public ?string $userAgent = null,
         public array $hints = []
-    ) {}
+    ) {
+    }
 }

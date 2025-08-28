@@ -20,7 +20,8 @@ final readonly class ConfirmationRequestedListener implements EventListener
     public function __construct(
         private Mailer $mailer,
         private UserRepository $userRepository
-    ) {}
+    ) {
+    }
 
     public function __invoke(ConfirmationRequested $event): void
     {

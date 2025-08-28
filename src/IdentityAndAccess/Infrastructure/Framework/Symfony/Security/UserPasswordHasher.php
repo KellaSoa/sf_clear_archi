@@ -17,7 +17,8 @@ final readonly class UserPasswordHasher implements PasswordHasher
 {
     public function __construct(
         private UserPasswordHasherInterface $passwordHasher
-    ) {}
+    ) {
+    }
 
     #[\Override]
     public function hash(User $user, string $password): string

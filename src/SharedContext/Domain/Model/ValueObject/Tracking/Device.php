@@ -16,7 +16,8 @@ final readonly class Device
         public ?string $client = null,
         public ?string $device = null,
         public bool $isBot = false,
-    ) {}
+    ) {
+    }
 
     public static function empty(): self
     {

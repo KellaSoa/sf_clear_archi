@@ -27,7 +27,8 @@ final readonly class RequestPasswordHandler implements CommandHandler
         private VerificationTokenRepository $verificationTokenRepository,
         private SecretGenerator $secretGenerator,
         private EventDispatcher $eventDispatcher,
-    ) {}
+    ) {
+    }
 
     public function __invoke(RequestPassword $command): void
     {

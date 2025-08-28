@@ -31,7 +31,8 @@ final readonly class ClientProfiler implements ClientProfilerInterface
     public function __construct(
         private string $projectDir,
         private LoggerInterface $logger
-    ) {}
+    ) {
+    }
 
     #[\Override]
     public function locate(ClientProfile $profile): GeoLocation

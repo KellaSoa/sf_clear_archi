@@ -23,5 +23,6 @@ final readonly class StudentProfile
         public Email $email,
         public Address $address,
         public Age $age
-    ) {}
+    ) {
+    }
 }

@@ -17,7 +17,8 @@ final readonly class EmailVerifier
 {
     public function __construct(
         private StudentRepository $studentRepository
-    ) {}
+    ) {
+    }
 
     public function assertNotUsed(Email $email): void
     {

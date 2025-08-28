@@ -19,7 +19,8 @@ final readonly class ConfirmationRequestedEmail implements EmailDefinition
         private Email $recipient,
         private string $name,
         private GeneratedToken $token
-    ) {}
+    ) {
+    }
 
     #[\Override]
     public function recipient(): Email

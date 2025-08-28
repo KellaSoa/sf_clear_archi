@@ -26,7 +26,8 @@ final readonly class LockAccountHandler implements CommandHandler
         private VerificationTokenRepository $verificationTokenRepository,
         private SecretGenerator $secretGenerator,
         private EventDispatcher $eventDispatcher
-    ) {}
+    ) {
+    }
 
     public function __invoke(LockAccount $command): void
     {

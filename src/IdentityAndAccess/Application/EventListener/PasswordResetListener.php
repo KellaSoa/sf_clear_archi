@@ -20,7 +20,8 @@ final readonly class PasswordResetListener implements EventListener
     public function __construct(
         private Mailer $mailer,
         private UserRepository $userRepository
-    ) {}
+    ) {
+    }
 
     public function __invoke(PasswordReset $event): void
     {

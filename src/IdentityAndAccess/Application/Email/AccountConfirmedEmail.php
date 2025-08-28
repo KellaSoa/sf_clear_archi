@@ -18,7 +18,8 @@ final readonly class AccountConfirmedEmail implements EmailDefinition
         private Email $recipient,
         private bool $isSocialLogin,
         private ?string $socialLoginService
-    ) {}
+    ) {
+    }
 
     #[\Override]
     public function recipient(): Email

@@ -15,5 +15,6 @@ final readonly class LockAccount
 {
     public function __construct(
         public UserId $userId
-    ) {}
+    ) {
+    }
 }

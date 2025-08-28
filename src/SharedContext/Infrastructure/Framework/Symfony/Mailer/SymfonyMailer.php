@@ -24,7 +24,8 @@ final readonly class SymfonyMailer implements Mailer
         private MailerInterface $mailer,
         private TranslatorInterface $translator,
         private Application $application = new Application()
-    ) {}
+    ) {
+    }
 
     /**
      * @throws TransportExceptionInterface

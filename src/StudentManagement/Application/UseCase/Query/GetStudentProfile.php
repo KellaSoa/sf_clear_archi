@@ -15,5 +15,6 @@ final readonly class GetStudentProfile
 {
     public function __construct(
         public StudentId $studentId
-    ) {}
+    ) {
+    }
 }

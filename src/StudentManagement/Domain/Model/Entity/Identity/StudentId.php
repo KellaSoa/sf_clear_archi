@@ -11,4 +11,6 @@ use Symfony\Component\Uid\UuidV7;
  *
  * @author Kella
  */
-final class StudentId extends UuidV7 {}
+final class StudentId extends UuidV7
+{
+}

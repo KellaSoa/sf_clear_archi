@@ -15,5 +15,6 @@ final readonly class PasswordUpdated
 {
     public function __construct(
         public UserId $userId
-    ) {}
+    ) {
+    }
 }

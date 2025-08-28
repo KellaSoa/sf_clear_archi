@@ -15,5 +15,6 @@ final readonly class PasswordReset
 {
     public function __construct(
         public UserId $userId
-    ) {}
+    ) {
+    }
 }

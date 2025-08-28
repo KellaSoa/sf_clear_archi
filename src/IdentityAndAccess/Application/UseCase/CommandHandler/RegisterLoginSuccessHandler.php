@@ -26,7 +26,8 @@ final readonly class RegisterLoginSuccessHandler implements CommandHandler
         private LoginAttemptRepository $loginAttemptRepository,
         private ClientProfiler $clientProfiler,
         private EventDispatcher $eventDispatcher
-    ) {}
+    ) {
+    }
 
     public function __invoke(RegisterLoginSuccess $command): void
     {

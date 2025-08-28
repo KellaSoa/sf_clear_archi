@@ -22,7 +22,8 @@ final readonly class ConfirmAccountHandler implements CommandHandler
         private UserRepository $userRepository,
         private VerificationTokenRepository $verificationTokenRepository,
         private EventDispatcher $eventDispatcher
-    ) {}
+    ) {
+    }
 
     public function __invoke(ConfirmAccount $command): void
     {

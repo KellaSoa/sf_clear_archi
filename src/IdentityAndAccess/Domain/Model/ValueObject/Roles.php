@@ -19,7 +19,7 @@ readonly class Roles implements \Stringable
         Assert::allIsInstanceOf($roles, Role::class);
 
         $roles[] = Role::USER;
-        $this->roles = array_unique(\array_map(fn(Role $role) => $role->value, $roles));
+        $this->roles = array_unique(\array_map(fn (Role $role) => $role->value, $roles));
     }
 
     #[\Override]

@@ -15,5 +15,6 @@ final readonly class AccountConfirmed
 {
     public function __construct(
         public UserId $userId
-    ) {}
+    ) {
+    }
 }

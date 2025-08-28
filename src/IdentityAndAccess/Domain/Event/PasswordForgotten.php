@@ -17,5 +17,6 @@ final readonly class PasswordForgotten
     public function __construct(
         public UserId $userId,
         public GeneratedToken $token,
-    ) {}
+    ) {
+    }
 }

@@ -19,5 +19,6 @@ final readonly class LoginProfileChanged
         public UserId $userId,
         public Device $device,
         public GeoLocation $location
-    ) {}
+    ) {
+    }
 }

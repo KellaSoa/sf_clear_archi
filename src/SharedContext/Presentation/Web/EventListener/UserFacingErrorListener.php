@@ -22,7 +22,8 @@ final readonly class UserFacingErrorListener
 {
     public function __construct(
         private TranslatorInterface $translator
-    ) {}
+    ) {
+    }
 
     public function __invoke(ExceptionEvent $event): void
     {

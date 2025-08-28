@@ -25,7 +25,8 @@ final readonly class RegisterLoginAttemptHandler implements CommandHandler
         private UserRepository $userRepository,
         private LoginAttemptRepository $loginAttemptRepository,
         private CommandBus $commandBus
-    ) {}
+    ) {
+    }
 
     public function __invoke(RegisterLoginAttempt $command): void
     {

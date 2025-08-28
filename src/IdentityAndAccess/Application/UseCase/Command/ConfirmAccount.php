@@ -15,5 +15,6 @@ final readonly class ConfirmAccount
 {
     public function __construct(
         public GeneratedToken $token
-    ) {}
+    ) {
+    }
 }

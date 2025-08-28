@@ -20,7 +20,8 @@ final readonly class LoginProfileChangedListener implements EventListener
     public function __construct(
         private Mailer $mailer,
         private UserRepository $userRepository
-    ) {}
+    ) {
+    }
 
     public function __invoke(LoginProfileChanged $event): void
     {

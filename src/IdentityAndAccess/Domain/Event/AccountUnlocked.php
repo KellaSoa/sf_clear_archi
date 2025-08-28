@@ -15,5 +15,6 @@ final readonly class AccountUnlocked
 {
     public function __construct(
         public UserId $userId
-    ) {}
+    ) {
+    }
 }

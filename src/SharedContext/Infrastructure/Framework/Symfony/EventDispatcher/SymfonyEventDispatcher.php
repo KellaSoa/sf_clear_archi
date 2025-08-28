@@ -17,7 +17,8 @@ final readonly class SymfonyEventDispatcher implements EventDispatcher
 {
     public function __construct(
         private EventDispatcherInterface $eventDispatcher
-    ) {}
+    ) {
+    }
 
     /**
      * @param array<int, object> $events

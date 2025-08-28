@@ -20,7 +20,8 @@ final readonly class LoginProfileChangedEmail implements EmailDefinition
         private Email $recipient,
         private Device $device,
         private GeoLocation $location
-    ) {}
+    ) {
+    }
 
     #[\Override]
     public function recipient(): Email

@@ -29,7 +29,8 @@ final readonly class RegisterHandler implements CommandHandler
         private PasswordHasher $passwordHasher,
         private SecretGenerator $secretGenerator,
         private EventDispatcher $eventDispatcher
-    ) {}
+    ) {
+    }
 
     public function __invoke(Register $command): void
     {

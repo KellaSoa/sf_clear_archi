@@ -18,7 +18,8 @@ final readonly class PasswordCreatedEmail implements EmailDefinition
     public function __construct(
         private Email $recipient,
         private GeneratedCode $code
-    ) {}
+    ) {
+    }
 
     #[\Override]
     public function recipient(): Email

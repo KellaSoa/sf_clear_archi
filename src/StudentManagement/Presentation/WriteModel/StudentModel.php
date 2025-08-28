@@ -22,7 +22,8 @@ final class StudentModel
         public ?Username $username = null,
         public Address $address = new Address(),
         #[Assert\LessThan('today')] public ?\DateTimeImmutable $birthdate = null
-    ) {}
+    ) {
+    }
 
     public static function createFromEntity(Student $student): self
     {

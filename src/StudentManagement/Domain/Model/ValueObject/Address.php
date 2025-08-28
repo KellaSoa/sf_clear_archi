@@ -16,5 +16,6 @@ final class Address
         public ?string $country = null,
         public ?string $addressLine1 = null,
         public ?string $addressLine2 = null
-    ) {}
+    ) {
+    }
 }

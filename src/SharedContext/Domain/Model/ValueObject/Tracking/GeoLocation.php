@@ -20,7 +20,8 @@ final readonly class GeoLocation
         public ?float $longitude = null,
         public ?float $latitude = null,
         public ?int $accuracyRadius = null,
-    ) {}
+    ) {
+    }
 
     public static function from(array $data): self
     {

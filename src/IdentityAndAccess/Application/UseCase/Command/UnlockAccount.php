@@ -15,5 +15,6 @@ final readonly class UnlockAccount
 {
     public function __construct(
         public GeneratedToken $token,
-    ) {}
+    ) {
+    }
 }

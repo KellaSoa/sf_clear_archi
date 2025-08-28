@@ -17,5 +17,6 @@ final readonly class RegisterLoginSuccess
     public function __construct(
         public UserId $userId,
         public ClientProfile $profile
-    ) {}
+    ) {
+    }
 }

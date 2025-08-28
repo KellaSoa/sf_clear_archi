@@ -18,5 +18,6 @@ final readonly class EmailUpdated
         public UserId $userId,
         public Email $previous,
         public Email $current
-    ) {}
+    ) {
+    }
 }

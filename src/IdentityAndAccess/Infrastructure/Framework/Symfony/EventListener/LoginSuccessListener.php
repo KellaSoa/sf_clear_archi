@@ -22,7 +22,8 @@ final readonly class LoginSuccessListener
 {
     public function __construct(
         private CommandBus $commandBus,
-    ) {}
+    ) {
+    }
 
     public function __invoke(LoginSuccessEvent $event): void
     {

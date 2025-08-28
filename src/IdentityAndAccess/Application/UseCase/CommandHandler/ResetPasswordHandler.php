@@ -24,7 +24,8 @@ final readonly class ResetPasswordHandler implements CommandHandler
         private VerificationTokenRepository $verificationTokenRepository,
         private PasswordHasher $passwordHasher,
         private EventDispatcher $eventDispatcher
-    ) {}
+    ) {
+    }
 
     public function __invoke(ResetPassword $command): void
     {

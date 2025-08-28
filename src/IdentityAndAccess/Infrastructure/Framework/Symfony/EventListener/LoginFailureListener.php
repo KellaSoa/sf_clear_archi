@@ -21,7 +21,8 @@ final readonly class LoginFailureListener
 {
     public function __construct(
         private CommandBus $commandBus
-    ) {}
+    ) {
+    }
 
     public function __invoke(LoginFailureEvent $event): void
     {

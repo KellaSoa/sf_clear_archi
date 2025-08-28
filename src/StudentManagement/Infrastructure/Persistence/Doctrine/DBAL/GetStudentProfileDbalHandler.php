@@ -26,7 +26,8 @@ final readonly class GetStudentProfileDbalHandler implements GetStudentProfileHa
     public function __construct(
         private Connection $connection,
         private AddressFactory $addressFactory
-    ) {}
+    ) {
+    }
 
     #[\Override]
     public function __invoke(GetStudentProfile $query): StudentProfile

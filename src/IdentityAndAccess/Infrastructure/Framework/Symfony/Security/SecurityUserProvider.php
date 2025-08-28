@@ -21,7 +21,8 @@ final readonly class SecurityUserProvider implements UserProviderInterface
 {
     public function __construct(
         private UserRepository $userRepository,
-    ) {}
+    ) {
+    }
 
     #[\Override]
     public function refreshUser(UserInterface $user): UserInterface

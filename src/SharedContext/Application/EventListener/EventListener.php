@@ -9,4 +9,6 @@ namespace Classroom\SharedContext\Application\EventListener;
  *
  * @author Kella
  */
-interface EventListener {}
+interface EventListener
+{
+}

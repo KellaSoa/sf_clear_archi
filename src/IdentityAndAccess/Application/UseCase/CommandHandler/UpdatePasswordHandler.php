@@ -21,7 +21,8 @@ final readonly class UpdatePasswordHandler implements CommandHandler
         private UserRepository $userRepository,
         private PasswordHasher $passwordHasher,
         private EventDispatcher $eventDispatcher
-    ) {}
+    ) {
+    }
 
     public function __invoke(UpdatePassword $command): void
     {

@@ -17,5 +17,6 @@ final readonly class UpdatePassword
         public UserId $userId,
         public string $current,
         public string $password,
-    ) {}
+    ) {
+    }
 }

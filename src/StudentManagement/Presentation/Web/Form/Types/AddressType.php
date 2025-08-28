@@ -24,7 +24,8 @@ final class AddressType extends AbstractType implements DataMapperInterface
 {
     public function __construct(
         private readonly AddressFactory $addressFactory
-    ) {}
+    ) {
+    }
 
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {

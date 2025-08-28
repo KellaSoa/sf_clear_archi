@@ -18,7 +18,8 @@ final readonly class AccountLockedEmail implements EmailDefinition
     public function __construct(
         private Email $recipient,
         private GeneratedToken $token
-    ) {}
+    ) {
+    }
 
     #[\Override]
     public function recipient(): Email

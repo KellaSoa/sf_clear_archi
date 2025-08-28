@@ -9,4 +9,6 @@ namespace Classroom\SharedContext\Application\Messaging;
  *
  * @author Kella
  */
-interface CommandHandler {}
+interface CommandHandler
+{
+}

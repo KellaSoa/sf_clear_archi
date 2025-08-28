@@ -25,7 +25,8 @@ final readonly class SecurityUser implements UserInterface, PasswordAuthenticate
         public array $roles,
         public bool $isLocked,
         public bool $isConfirmed
-    ) {}
+    ) {
+    }
 
     public static function create(User $user): self
     {
@@ -52,7 +53,9 @@ final readonly class SecurityUser implements UserInterface, PasswordAuthenticate
     }
 
     #[\Override]
-    public function eraseCredentials(): void {}
+    public function eraseCredentials(): void
+    {
+    }
 
     #[\Override]
     public function getUserIdentifier(): string

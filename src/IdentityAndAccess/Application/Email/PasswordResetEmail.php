@@ -16,7 +16,8 @@ final readonly class PasswordResetEmail implements EmailDefinition
 {
     public function __construct(
         private Email $recipient,
-    ) {}
+    ) {
+    }
 
     #[\Override]
     public function recipient(): Email

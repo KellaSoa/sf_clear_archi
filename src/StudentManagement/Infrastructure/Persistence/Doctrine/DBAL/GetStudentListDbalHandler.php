@@ -25,7 +25,8 @@ final readonly class GetStudentListDbalHandler implements GetStudentListHandler
     public function __construct(
         private Connection $connection,
         private AddressFactory $addressFactory
-    ) {}
+    ) {
+    }
 
     #[\Override]
     public function __invoke(GetStudentList $query): StudentList
@@ -41,6 +42,6 @@ final readonly class GetStudentListDbalHandler implements GetStudentListHandler
 
     private function mapStudentList(array $data): StudentList
     {
-        return new StudentList(array_map(fn($item) => $this->mapStudentProfile($item), $data));
+        return new StudentList(array_map(fn ($item) => $this->mapStudentProfile($item), $data));
     }
 }

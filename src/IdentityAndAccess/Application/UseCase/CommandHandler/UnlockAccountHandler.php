@@ -24,7 +24,8 @@ final readonly class UnlockAccountHandler implements CommandHandler
         private VerificationTokenRepository $verificationTokenRepository,
         private LoginAttemptRepository $loginAttemptRepository,
         private EventDispatcher $eventDispatcher
-    ) {}
+    ) {
+    }
 
     public function __invoke(UnlockAccount $command): void
     {

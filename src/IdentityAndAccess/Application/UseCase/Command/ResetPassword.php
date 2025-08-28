@@ -16,5 +16,6 @@ final readonly class ResetPassword
     public function __construct(
         public GeneratedToken $token,
         public string $password
-    ) {}
+    ) {
+    }
 }

@@ -94,7 +94,7 @@
             "@auto-scripts"
         ],
         "app:cs": [
-            "./vendor/bin/ecs check",
+            "./vendor/bin/ecs check --fix",
             "bin/console lint:yaml config --parse-tags",
             "bin/console lint:container",
             "./vendor/bin/phpstan analyse --memory-limit=-1 --configuration=phpstan.neon",

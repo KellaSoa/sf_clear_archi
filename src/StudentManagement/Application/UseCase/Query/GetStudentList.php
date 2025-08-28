@@ -9,4 +9,6 @@ namespace Classroom\StudentManagement\Application\UseCase\Query;
  *
  * @author Kella
  */
-final readonly class GetStudentList {}
+final readonly class GetStudentList
+{
+}
