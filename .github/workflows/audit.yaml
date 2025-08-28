@@ -1,6 +1,6 @@
 name: audit
 on:
-  wokflow_call:
+  workflow_call:
   push:
     branches_ignore:
       - master
