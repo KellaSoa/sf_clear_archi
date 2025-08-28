@@ -1,0 +1,2 @@
+identity_and_access.exceptions.email_already_used: vous ne pouvez utiliser cet adrresse email!
+identity_and_access.exceptions.account_not_confirmed: vous devez confirme votre email 
