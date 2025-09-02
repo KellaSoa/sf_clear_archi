@@ -1,0 +1,57 @@
+name: Tests
+on: [push, pull_request]
+  workflow_call:
+  push:
+    branches_ignore:
+      - master
+jobs:
+  quality:
+    name: Tests
+    runs-on: ubuntu-latest
+    services:
+      database:
+    image: mariadb:10.11.11
+    environment:
+      MARIADB_USER: root
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: app_test
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 'no'
+    volumes:
+      - database_data:/var/lib/mysql:rw
+      - ./var/mysql:/var/www/var
+    networks:
+      - classroom_network
+    steps:
+      -   name: Checkout
+          uses: actions/checkout@v4
+
+      -   name: Setup PHP
+          uses: shivammathur/setup-php@v2
+          with:
+            php-version: 8.4
+            tools: composer:v2
+
+      -   name: Setup cache
+          run: echo "COMPOSER_CACHE_DIR=$(composer config cache-dir)" >> $GITHUB_ENV
+
+      -   name: Cache dependencies installed with composer
+          uses: actions/cache@v4
+          with:
+            path: ${{ env.COMPOSER_CACHE_DIR }}
+            key: php8.4-composer-${{ hashFiles('**/composer.json') }}
+            restore-keys: |
+              php8.4-composer-latest-
+      -   name: Update composer
+          run: composer self-update
+
+      -   name: Install dependencies with composer
+          run: composer install --prefer-dist --no-interaction --no-progress --optimize-autoloader --ansi
+
+      -   name: Prepare the database
+          run: sudo systemctl start mysql
+
+      -   name: Run code Tests
+          run: composer app:tests
+          env:
+            APP_ENV: test
+            DATABASE_URL: mysql://root:root@127.0.0.1:${{ job.services.database.ports['3306'] }}/app_test 
